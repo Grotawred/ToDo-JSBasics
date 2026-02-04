@@ -11,6 +11,7 @@ h1{
 }
 
 #taskInput{
+    font-family: monospace, sans-serif;
     width: 80%;
     padding: 10px;
     margin: 10px 0;
@@ -28,6 +29,7 @@ h1{
     margin-left: 10px;
 }
 #addTaskButton{
+    font-family: monospace;
     padding: 10px 15px;
     background-color: #333;
     color: white;
@@ -45,8 +47,8 @@ h1{
     padding: 0;
 }
 #taskList li{
-    background-color: #ccc;
-    border-radius: 15px;
+    background-color: #e1dede;
+    border-radius: 10px;
     padding: 10px;
     margin-top: 15px;
     display: flex;
@@ -54,9 +56,21 @@ h1{
     align-items: center;
 }
 
+.editBtn{
+    font-family: monospace;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
 .deleteBtn{
+    font-family: monospace;
     margin-left: 10px;
     padding: 5px 10px;
+    color: white;
     background-color: #e77474;
     cursor: pointer;
     border: none;

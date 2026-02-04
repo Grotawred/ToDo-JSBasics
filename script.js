@@ -16,17 +16,30 @@ function loadList(){
 
 function addTask(taskText){
     const li = document.createElement('li');
+    const div = document.createElement('div');
     const delBtn = document.createElement('button');
+    const editBtn = document.createElement('button');
+    editBtn.className = 'editBtn';
+    editBtn.textContent = 'Edit';
     delBtn.className = 'deleteBtn';
     delBtn.textContent = 'Delete';
 
+    editBtn.addEventListener('click', () => {
+        const newText = prompt('Edit task:', taskText);
+        if(newText && newText.trim()){
+            li.firstChild.textContent = newText.trim();
+            saveList();
+        }
+    });
     delBtn.addEventListener('click', () => {
         li.remove();
         saveList();
     });
 
     li.textContent = taskText;
-    li.appendChild(delBtn);
+    div.appendChild(editBtn);
+    div.appendChild(delBtn);
+    li.appendChild(div);
     taskList.appendChild(li);
     input.value = '';
 
